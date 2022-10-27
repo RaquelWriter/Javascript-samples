@@ -2,16 +2,17 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Números primos</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="css/javascript-samples.css">
+    <link rel="stylesheet" href="css/javascript-samples.css" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 
 <body>
@@ -21,38 +22,69 @@
             <div>
                 <label for="inputNumber">Type a number to check if it's prime or not</label>
             </div>
-                <input type="text" name='inputNumber' id="inputNumber">
+            <input type="text" name="inputNumber" id="inputNumber" />
 
-                <button type="button" class='btn btn-outline-danger' onClick='showIsPrimeNumber()'>Send</button>
+            <button type="button" class="btn btn-outline-danger" onClick="showIsPrimeNumber()">
+                Send
+            </button>
 
-            <div class='result' id="resultPrimeNumber">Result</div>
+            <div class="result" id="resultPrimeNumber">Result</div>
         </div>
         <div class="form">
             <div>
-                <label for="words">Checking if two arrays are similar or not
-                    <br>Type one or more words separated by commas</label>
+                <label for="words">Checking if two arrays are similar or not <br />Type one or more
+                    words separated by commas</label>
             </div>
-            <input type="text" name='words' id="wordsOne" />
-            <input type="text" name='words' id="wordsTwo" />
-            <button type="button" class='btn btn-outline-danger' onClick='showIfTheyAreSimilar()'>Send</button>
-            <div class='result' id="resultSimilarArrays">Result</div>
+            <input type="text" name="words" id="wordsOne" />
+            <input type="text" name="words" id="wordsTwo" />
+            <button type="button" class="btn btn-outline-danger" onClick="showIfTheyAreSimilar()">
+                Send
+            </button>
+            <div class="result" id="resultSimilarArrays">Result</div>
         </div>
         <div class="form">
             <div>
-                <label for="words">Guess the number I am thinking between 1 and 10!
-                    <br>Type your guessing:</label>
+                <label for="words">Guess the number I am thinking between 1 and 10! <br />Type your
+                    guessing:</label>
             </div>
-            <input type="text" name='guessNumber' id="inputGuessNumber" />
-            <button type="button" class='btn btn-outline-danger' onClick='guessNumber()'>Send</button>
-            <div class='result' id="resultGuessNumber">Result</div>
-
+            <input type="text" name="guessNumber" id="inputGuessNumber" />
+            <button type="button" class="btn btn-outline-danger" onClick="guessNumber()">
+                Send
+            </button>
+            <div class="result" id="resultGuessNumber">Result</div>
         </div>
 
+        <div class="form">
+            <div class="card card-text mb-3 xs-3">
+                <div class="card-header" id="">Find a Pokemon</div>
+                <h5 class="card-title">
+                    Type the name to find the main characteristics of the Pokemon
+                    (ex.: Pikachu, Ditto, Venusaur, Pidgeot...)
+                </h5>
+                <input type="text" name="inputPokemon" id="inputPokemon" placeholder="Name of the Pokemon"/>
+                <button class="btn btn-outline-success" type="'button" onClick="fetchPokemon()">
+                    Buscar
+                </button>
+
+                <!-- Start Pokemon card -->
+                <div class="card box-rounded">
+                    <img class="card-img-top" id="imgPokemon" src="./images/pokemon-logo.png"
+                        alt="Pokemon Image" />
+                    <div class="card-body">
+                        <h3 class="card-title" id="namePokemon"></h3>
+                        <p class="card-text" id="traitsPokemon"></p>
+                        <p class="card-text" id="statsPokemon"></p>
+                    </div>
+                </div>
+                <!-- End Pokemon card -->
+            </div>
+        </div>
     </div>
 
-    <script src='js/prime-numbers.js'></script>
-    <script src='js/similar-arrays.js'></script>
+    <script src="js/prime-numbers.js"></script>
+    <script src="js/similar-arrays.js"></script>
     <script src="js/guess-number.js"></script>
+    <script src="js/find-pokemon.js"></script>
 </body>
 
 </html>

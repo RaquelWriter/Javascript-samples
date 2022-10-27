@@ -9,6 +9,12 @@ body{
     padding: 2rem;
     border-radius: 10px;
 }
+.card{
+    border-radius: 20px;
+    width: 50vw;
+    padding: 2px;
+    margin: 0px;
+}
 div{
     margin: 1rem;
 }
@@ -35,4 +41,17 @@ label{
 .result{
     border-radius: 2rem;
     padding: 2rem;
+}
+.card.box-rounded{
+    background-color: azure;
+    border-radius: 30px;
+    width: 99%;
+}
+#imgPokemon{
+    margin: 0 auto;
+    text-align: center;
+    width: 50%;
+}
+#inputPokemon{
+    background-color: #D8CFD0;
 }
